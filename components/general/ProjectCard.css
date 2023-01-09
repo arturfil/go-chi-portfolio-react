@@ -1,0 +1,11 @@
+.project-card {
+    min-height: 200px;
+    width: 300px;
+    box-shadow: 0 1px 5px 0px lightgrey;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.project-card p {
+    word-wrap: break-word;
+}

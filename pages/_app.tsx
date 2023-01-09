@@ -1,6 +1,19 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import { store } from '../store/store'
+import { Provider } from 'react-redux'
+import NavBar from '../components/layout/NavBar'
+
+import '../components/layout/NavBar.css';
+import './Home.css';
+import './login/Login.css'
+import '../components/general/ProjectCard.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Provider store={store}>
+      <NavBar/>
+      <Component {...pageProps} />
+    </Provider>
+  )
 }
