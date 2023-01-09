@@ -4,8 +4,8 @@ import { store } from '../store/store'
 import { Provider } from 'react-redux'
 import NavBar from '../components/layout/NavBar'
 
-import '../components/layout/NavBar.css';
-import './Home.css';
+import '../styles/Home.css'
+import '../styles/NavBar.css';
 import './login/Login.css'
 import '../components/general/ProjectCard.css';
 

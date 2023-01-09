@@ -6,7 +6,6 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-/* general styles */
 a, li {
   list-style: none;
   text-decoration: none;
@@ -15,9 +14,9 @@ a, li {
 
 .button {
   background-image: linear-gradient(90deg, rgb(140, 218, 169) ,rgb(24, 236, 165));
-  border-radius: 10px;
-  text-transform: capitalize;
-  color: white;
+  border-radius: 10px!important;
+  text-transform: capitalize!important;
+  color: white!important;
 }
 
 .inputField {
