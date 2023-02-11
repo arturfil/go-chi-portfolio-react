@@ -11,6 +11,8 @@ import {
 import Toolbar from "@mui/material/Toolbar";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
+import { useAppDispatch, useAppSelector } from "../../store/hook";
+import { logOut } from "../../features/account/accountSlice";
 
 const pages = [
   { title: "Home", route: "/" },
@@ -19,8 +21,10 @@ const pages = [
 ];
 
 export default function NavBar() {
+  const dispatch = useAppDispatch();
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+  const {isLoggedIn} = useAppSelector(state => state.account);
 
   const handleOpenNavMenu = (e: MouseEvent<HTMLElement>) =>
     setAnchorElNav(e.currentTarget);
@@ -78,6 +82,15 @@ export default function NavBar() {
                   </Button>
                 </Link>
               ))}
+              {isLoggedIn && (
+                <Link href={`/projects/create`}>
+                  <Button onClick={handleCloseNavMenu} 
+                    sx={{my: 2, color: "black", display: "block",fontWeight: "bold"}}
+                  >
+                      Create Project
+                  </Button>
+                </Link>
+              )}
             </Menu>
           </Box>
           <Typography
@@ -104,6 +117,7 @@ export default function NavBar() {
                     my: 2,
                     color: "black",
                     display: "flex",
+                    textTransform: "capitalize",
                     fontWeight: 600,
                   }}
                 >
@@ -111,20 +125,22 @@ export default function NavBar() {
                 </Button>
               </Link>
             ))}
-            {/* <Button
-              LinkComponent={Link}
-              href="/login"
-              className="button"
-              sx={{backgroundColor: "blue", my: 2, mx: 8, color: "white", width: "100px"}}
-            >
-              Login
-            </Button>
-            <Button
-              className="button"
-              sx={{backgroundColor: "blue", my: 2, color: "white", width: "100px"}}
-            >
-              Signup
-            </Button> */}
+            {isLoggedIn && (
+              <>
+                <Link href={`/projects/create`}>
+                  <Button onClick={handleCloseNavMenu} 
+                    sx={{my: 2, mx: 4, color: "black", display: "block",fontWeight: "bold", textTransform: "capitalize"}}
+                  >
+                      Create Project
+                  </Button>
+                </Link>
+                <Button className="button" onClick={() => dispatch(logOut())} 
+                sx={{my: 2, color: "black", display: "block",fontWeight: "bold", textTransform: "capitalize"}}
+                >
+                    Log Out
+                </Button>
+              </>
+            )}
           </Box>
         </Toolbar>
       </Container>

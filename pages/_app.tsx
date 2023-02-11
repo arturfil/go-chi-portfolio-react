@@ -8,12 +8,26 @@ import '../styles/Home.css'
 import '../styles/NavBar.css';
 import './login/Login.css'
 import '../components/general/ProjectCard.css';
+import { ToastContainer } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css";
+import Wrapper from '../components/Wrapper'
+import { NextPage } from 'next'
 
-export default function App({ Component, pageProps }: AppProps) {
+export type NextApplicationPage<P = any, IP = P> = NextPage<P, IP> & {
+  requiredAuth?: boolean;
+}
+
+export default function App(props: AppProps) { 
+  const {Component, pageProps}: {Component: NextApplicationPage; pageProps: any} = props;
   return (
     <Provider store={store}>
-      <NavBar/>
-      <Component {...pageProps} />
+      <Wrapper {...pageProps}>
+        <>
+          <ToastContainer/>
+          <NavBar/>
+          <Component {...pageProps} />
+        </>
+      </Wrapper>
     </Provider>
   )
 }

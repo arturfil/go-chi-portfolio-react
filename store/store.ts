@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import projectReducer from '../features/projects/projectSlice';
+import accountReducer from '../features/account/accountSlice';
 
 export const store = configureStore({
     reducer: {
-        projects: projectReducer
+        projects: projectReducer,
+        account: accountReducer 
     }
 });
 

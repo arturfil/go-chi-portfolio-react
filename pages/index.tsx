@@ -1,10 +1,4 @@
-import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
-import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../store/hook";
-import { getAllProjects } from "../features/projects/projectSlice";
 import { Container } from "@mui/system";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import image from "../assets/analytics.png";
@@ -12,12 +6,6 @@ import Link from "next/link";
 import YoutubeVideo from "../components/general/YoutubeVideo";
 
 export default function Home() {
-  const dispatch = useAppDispatch();
-  const { projects } = useAppSelector((state) => state.projects);
-
-  useEffect(() => {
-    dispatch(getAllProjects());
-  }, []);
 
   return (
     <>
