@@ -2,7 +2,7 @@ import { Input } from "@mui/joy";
 import { Button, Container, Grid, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { MouseEvent, useEffect, useState } from "react";
-import { editProject, getSingleProject } from "../../../features/projects/projectSlice";
+import { deleteProject, editProject, getSingleProject } from "../../../features/projects/projectSlice";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
 
 export default function EditPage() {
@@ -37,6 +37,12 @@ export default function EditPage() {
   function handleSubmit(e: MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     dispatch(editProject(project));
+    router.push("/");
+  }
+
+  function handleDelete(e: MouseEvent<HTMLButtonElement>) {
+    e.preventDefault();
+    dispatch(deleteProject(project.id));
     router.push("/");
   }
 
@@ -84,6 +90,11 @@ export default function EditPage() {
         <Grid item xs={12}>
           <Button onClick={handleSubmit} fullWidth className="button">
             Edit
+          </Button>
+        </Grid>
+        <Grid item xs={12}>
+          <Button onClick={handleDelete} fullWidth className="delete-button">
+            Delete
           </Button>
         </Grid>
       </Grid>

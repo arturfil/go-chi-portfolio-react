@@ -39,7 +39,7 @@ export const getSingleProject = createAsyncThunk<Project, string | any>(
             return thunkAPI.rejectWithValue({error});
         }
     }
-)
+);
 
 export const createProject = createAsyncThunk<Project, Project>(
     "project/createProject",
@@ -53,7 +53,7 @@ export const createProject = createAsyncThunk<Project, Project>(
             return thunkAPI.rejectWithValue({error});
         }
     }
-)
+);
 
 export const editProject = createAsyncThunk<Project, Project>(
     "project/editProject",
@@ -65,6 +65,20 @@ export const editProject = createAsyncThunk<Project, Project>(
             return response.data;
         } catch (error) {
             toast.error("Couldn't Update Project");
+            return thunkAPI.rejectWithValue({error});
+        }
+    }
+);
+
+export const deleteProject = createAsyncThunk<String, String>(
+    "project/deleteProject",
+    async (id, thunkAPI) => {
+        try {
+            const response  = await agent.delete(`/projects/project/${id}`);
+            toast.info("Successfully Deleted Project");
+            return response.data;
+        } catch (error) {
+            toast.error("Coudn't delete project");
             return thunkAPI.rejectWithValue({error});
         }
     }
