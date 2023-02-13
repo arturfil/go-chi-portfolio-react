@@ -83,13 +83,20 @@ export default function NavBar() {
                 </Link>
               ))}
               {isLoggedIn && (
-                <Link href={`/projects/create`}>
-                  <Button onClick={handleCloseNavMenu} 
-                    sx={{my: 2, color: "black", display: "block",fontWeight: "bold"}}
+                <>
+                  <Link href={`/projects/create`}>
+                    <Button onClick={handleCloseNavMenu} 
+                      sx={{my: 2, color: "black", display: "block",fontWeight: "bold"}}
+                    >
+                        Create Project
+                    </Button>
+                  </Link>
+                  <Button className="button" onClick={() => dispatch(logOut())} 
+                  sx={{ml: 2, my: 2, color: "black", display: "block",fontWeight: "bold", textTransform: "capitalize"}}
                   >
-                      Create Project
+                      Log Out
                   </Button>
-                </Link>
+                </>
               )}
             </Menu>
           </Box>
