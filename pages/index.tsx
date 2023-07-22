@@ -86,8 +86,8 @@ export default function Home() {
             Areas Of Knowledge
           </Typography>
           <p className="areas-of-knowledge-text">
-          C#, C++, Dart,
-Docker, DigitalOcean, Django, Flutter, Git, Golang, Java, Kubernetes, Kotlin, Linux, MySQL, MSSQL, MongoDB, Networks, NetCore, NodeJS, Python, PostgreSQL, Redux, SCSS, SQLite, Swift, Typescript, Unity.
+          C#, Dart,
+Docker, DigitalOcean, Django, Flutter, Git, Golang, Java, Kubernetes, Kotlin, Linux, MySQL, MSSQL, MongoDB, Networks, NetCore, NodeJS, Python, PostgreSQL, Redux, SCSS, SQLite, Typescript, Unity.
           </p>
         </Container>
       </div>
