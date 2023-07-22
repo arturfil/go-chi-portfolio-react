@@ -44,11 +44,6 @@ const projects = [
 ]
 
 export default function Projects() {
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(getAllProjects());
-  }, []);
 
   return (
     <Container sx={{mb: 3}}>
