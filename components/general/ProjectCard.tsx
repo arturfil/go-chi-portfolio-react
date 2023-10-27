@@ -1,4 +1,5 @@
 import { Box, Button } from "@mui/material";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Project } from "../../interfaces/Project";
@@ -14,6 +15,9 @@ export default function ProjectCard({project}: Props) {
   return (
     <Box className="project-card">
       <h2 style={{color: "#666666"}}>{project.name}</h2>
+      { project.img  &&  project.img !==  "test.jpg" && (
+          <Image src={project.img!} alt="image" height={170} width={300}/>
+      )}
       <p>{project.description}</p>
       <div >
         <Button

@@ -1,43 +1,49 @@
 import { Container, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import ProjectCard from "../../components/general/ProjectCard";
-import { getAllProjects } from "../../features/projects/projectSlice";
-import { useAppDispatch, useAppSelector } from "../../store/hook";
+import futbits from  "../../images/futbits.jpg"
+import bughunt from "../../images/bughunt.jpg"
+import coffeegallery from '../../images/coffeegallery.jpg'
+import artstudio from '../../images/artstudio.jpg'
 
 const projects = [
     {
         id: "8912348-091234-0918234-0981234",
-        name: "Fut Bit Server",
+        name: "Fut Bits",
         author: "Arturo Filio",
-        url: "https://github.com/arturfil/chi_soccer_backend",
-        description: "backend project in Go where I want to create an analysis application for soccer",
+        url: "http://futbits.com",
+        img: futbits,
+        description: "FullStack Project with Go, PostgresQL, Nextjs, Redux & AWS ec2",
         created_at: "2-3-2023",
         updated_at: "2-3-2023",
     },
     {
         id: "8912348-02341-0918234-0981235",
-        name: "Fut Bit Client",
+        name: "Bug Hunt",
         author: "Arturo Filio",
-        url: "https://github.com/arturfil/nextjs_chi_soccer",
-        description: "front end project with Nextjs & Redux where I want to create an analysis application for soccer",
+        url: "http://52.14.110.171",
+        img: bughunt,
+        description: "Full Stack Project with MERN stack & AWS ec2",
         created_at: "2-3-2023",
         updated_at: "2-3-2023",
     },
     {
         id: "8912348-091234-0918234-0981234",
-        name: "Forms Server",
+        name: "Coffee Gallery",
         author: "Arturo Filio",
-        url: "https://github.com/arturfil/R2D2S_Forms_backend",
-        description: "backend project in Java, for users to create polls and see analysis of polls",
+        url: "http://3.142.172.122",
+        img: coffeegallery,
+        description: "Full Stack project with MERN stack & AWS ec2",
         created_at: "2-3-2023",
         updated_at: "2-3-2023",
     },
     {
         id: "8912348-02341-0918234-0981235",
-        name: "Forms Client",
+        name: "ArtStudio",
         author: "Arturo Filio",
-        url: "https://github.com/arturfil/R2D2S_Forms_frontend",
-        description: "front end project with React, for users to create polls and see analysis of polls",
+        url: "http://192.241.139.139",
+        img: artstudio,
+        description: "E-Commerce Application with Angular 5, .Net, MySQL & AWS ec2",
         created_at: "2-3-2023",
         updated_at: "2-3-2023",
     }
