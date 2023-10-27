@@ -40,8 +40,8 @@ export default function About() {
           working in this field, the better.
         </p>
         <p>
-          Some people feel that they are limited or not capable to accomplish complex things in general
-          but I am a firm believer that who ever sets their mind to a goal, 
+          Some people often feel limited or not capable to accomplish complex things, 
+          I am a firm believer that who ever sets their mind to a goal, 
           nothing can stop them. This way of thinking has helped to be where I am and 
           defines who I am.
         </p>
@@ -63,7 +63,7 @@ export default function About() {
         }}
       ></div>
       <p className="about-me-text">
-        I normally like to play music like guitar or piano. I am a ver
+        I normally like to play music like guitar or piano. I am a very
         competitive soccer player, playing almost 5 days a week and I like to
         occasionally play chess.
       </p>

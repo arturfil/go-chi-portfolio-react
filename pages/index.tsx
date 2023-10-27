@@ -72,12 +72,24 @@ export default function Home() {
               </Typography>
             </Grid>
             <Grid item lg={6} md={6}>
-              <YoutubeVideo  url={"https://www.youtube.com/embed/2KYyhJnaZzs"}/>
+              <YoutubeVideo  url={"https://www.youtube.com/embed/rzr1F5NOylk"}/>
             </Grid>
             <Grid item lg={6} md={6}>
               <YoutubeVideo  url={"https://www.youtube.com/embed/PahysD2vc3s"}/>
             </Grid>
-          </Grid>
+            <Grid item lg={6} md={6}>
+              <YoutubeVideo  url={"https://www.youtube.com/embed/JBrF5yviZKE"}/>
+            </Grid>
+            <Grid item lg={6} md={6}>
+              <YoutubeVideo  url={"https://www.youtube.com/embed/9UTKrdHvKrE"}/>
+            </Grid>
+            <Grid item lg={6} md={6}>
+              <YoutubeVideo  url={"https://www.youtube.com/embed/QF9luSCW0aM"}/>
+            </Grid>
+            <Grid item lg={6} md={6}>
+              <YoutubeVideo  url={"https://www.youtube.com/embed/2KYyhJnaZzs"}/>
+            </Grid>
+           </Grid>
         </Container>
       </Container>
       <div className="areas">
