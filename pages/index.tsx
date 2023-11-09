@@ -92,17 +92,17 @@ export default function Home() {
            </Grid>
         </Container>
       </Container>
-      <div className="areas">
-        <Container>
-          <Typography className="blue-color" sx={{paddingTop: 10, width: "500px"}}  variant="h3" fontWeight={"bold"}>
-            Areas Of Knowledge
-          </Typography>
-          <p className="areas-of-knowledge-text">
-          C#, Dart,
-Docker, DigitalOcean, Django, Flutter, Git, Golang, Java, Kubernetes, Kotlin, Linux, MySQL, MSSQL, MongoDB, Networks, NetCore, NodeJS, Python, PostgreSQL, Redux, SCSS, SQLite, Typescript, Unity.
-          </p>
-        </Container>
-      </div>
+        <Box className="areas">
+            <Container  sx={{m: 0, p: 0}}>
+              <Typography className="blue-color" sx={{paddingTop: 10, width: "500px"}}  variant="h3" fontWeight={"bold"}>
+                Areas Of Knowledge
+              </Typography>
+              <p className="areas-of-knowledge-text">
+              C#, Dart,
+    Docker, DigitalOcean, Django, Flutter, Git, Golang, Java, Kubernetes, Kotlin, Linux, MySQL, MSSQL, MongoDB, Networks, NetCore, NodeJS, Python, PostgreSQL, Redux, SCSS, SQLite, Typescript, Unity.
+              </p>
+            </Container>
+        </Box>
       {/* </div> */}
     </>
   );
