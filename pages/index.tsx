@@ -62,7 +62,6 @@ export default function Home() {
           </Grid>
         </div>
       </Container>
-      {/* <div > */}
       <Container className="videos" sx={{display: "flex"}}>
         <Container sx={{display: "flex", justifyContent: "space-around"}}>
           <Grid container sx={{margin: "0 auto", display: "flex", justifyContent: "center"}}>
@@ -103,7 +102,6 @@ export default function Home() {
               </p>
             </Container>
         </Box>
-      {/* </div> */}
     </>
   );
 }
