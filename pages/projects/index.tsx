@@ -5,6 +5,7 @@ import futbits from  "../../images/futbits.jpg"
 import bughunt from "../../images/bughunt.jpg"
 import coffeegallery from '../../images/coffeegallery.jpg'
 import artstudio from '../../images/artstudio.jpg'
+import artusforms from "../../images/artus_forms.png"
 
 const projects = [
     {
@@ -46,7 +47,18 @@ const projects = [
         description: "E-Commerce Application with Angular 5, .Net, MySQL & AWS ec2",
         created_at: "2-3-2023",
         updated_at: "2-3-2023",
+    },
+    {
+        id: "234801-234809-asd980081243-lasdf9821",
+        name: "Arturos Forms",
+        author: "Arturo Filio",
+        url: "http://artursforms.s3-website-us-east-1.amazonaws.com/",
+        img: artusforms,
+        description: "Java Spring Boot, React Redux, MySQL & AWS ec2",
+        created_at: "2-3-2023",
+        updated_at: "2-3-2023",
     }
+
 ]
 
 export default function Projects() {
